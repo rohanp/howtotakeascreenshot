@@ -1,0 +1,46 @@
+<html>
+	<style type="text/css">
+		body{
+				margin:40px auto;
+				max-width:650px;
+				line-height:1.6;
+				font-size:18px;
+				color:#444;
+				padding:0 10px
+		}
+		h1,h2,h3{
+			line-height:1.2
+		}
+		#os{
+			float:right
+		}
+		
+	</style>
+	
+	<body>
+	
+	</body>
+	
+	<script>
+		var OSName="Unknown OS";
+		if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+		if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+		if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+		if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+		
+		document.write("<div id='os'>"+OSName+"</div><br>");
+		
+		if (OSName == "MacOS"){
+			document.write("<center><div id='command'><h1>Command + Shift + 3 </h1></div></center>")
+			document.write("<center><div id='info'> Your screenshot will then be saved to the Desktop</center>")
+		} else if (OSName == "Windows") {
+			document.write("<center><div id='command'><h1>Windows Key + Print Screen (Prt Sc) </h1></div></center>")
+			document.write("<center><div id='info'> Your screenshot will then be saved to This PC -> Pictures -> Screenshots</center>")
+		} else if (OSName == "Linux") {
+			document.write("<center><div id='command'><h1>Print Screen (Prt Sc) </h1></div></center>")
+			document.write("<center><div id='info'> Your screenshot will then be saved to Home -> Pictures")
+		}
+			
+	</script>
+
+</html>
